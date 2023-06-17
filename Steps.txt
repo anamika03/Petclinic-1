@@ -9,7 +9,6 @@ sudo vi tomcat-users.xml
 <user username="admin" password="admin1234" roles="admin-gui, manager-gui"/>
 
 
-
 sudo ln -s /opt/apache-tomcat-9.0.65/bin/startup.sh /usr/bin/startTomcat
 sudo ln -s /opt/apache-tomcat-9.0.65/bin/shutdown.sh /usr/bin/stopTomcat
 
@@ -31,11 +30,9 @@ sudo stopTomcat
 sudo startTomcat
 
 
-
 sudo  cp /home/ubuntu/myagent/_work/5/s/target/petclinic.war /opt/apache-tomcat-9.0.65/webapps/
 
 ##################-----PIPELINE------###################
-
 
 pipeline {
     agent any
@@ -171,7 +168,6 @@ sudo systemctl start jenkins
 sudo systemctl status jenkins
 
 
-
 ---TRIVY INSTALLATION STEPS---
 
 sudo apt-get install wget apt-transport-https gnupg lsb-release
@@ -183,3 +179,4 @@ echo "deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.
 sudo apt-get update
 
 sudo apt-get install trivy -y
+
